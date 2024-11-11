@@ -44,7 +44,7 @@ License: copyright commercial
   --theme-color-light: #ffffff;
   --theme-color-dark: #050B20;
   --theme-color-gray: #F6F6F6;
-  --theme-color1: #eb5e21;
+  --theme-color1: #e72400;
   --theme-color2: #00B67A;
   --theme-color3: #faf7f2;
   --bg-theme-color1: var(--theme-color1);
@@ -6382,6 +6382,14 @@ Section Title
   position: relative;
 }
 
+.background-video {
+  
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* Ensure the video stays in the background */
+}
+
 .boxcar-banner-section-nine:before {
   content: "";
   position: absolute;
@@ -7743,7 +7751,7 @@ Section Title
 ***/
 .boxcar-testimonial-section-four {
   position: relative;
-  padding: 120px 0;
+  padding: 0 0 120px;
 }
 
 .boxcar-testimonial-section-four .boxcar-title {
@@ -14924,7 +14932,7 @@ Section Title
 
 ***/
 .boxcar-team-section-three {
-  padding: 120px 0 90px;
+  padding: 30px 0 30px;
 }
 
 .boxcar-team-section-three .right-box {
@@ -25882,7 +25890,6 @@ Chat Widget
   }
 
   .boxcar-brand-section.v7 {
-    padding-bottom: 0;
     margin-bottom: -30px;
   }
 
@@ -30247,4 +30254,8 @@ li.nav-sub.mm-listitem .mm-listitem__btn {
 #slider-range-value01::after,
 #slider-range-value1::after {
   margin: 0 2px;
+}
+
+.boxcar-team-section-three img{
+  height: 200px !important;
 }
