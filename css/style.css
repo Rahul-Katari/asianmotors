@@ -1999,9 +1999,9 @@ Main Header
   background-color: var(--theme-color1);
 }
 
-.header-style-v1 .header-inner {
+/* .header-style-v1 .header-inner {
   padding: 28px 0 0;
-}
+} */
 
 .header-style-v1.home-8 .header-inner {
   padding-top: 60px;
@@ -2037,7 +2037,7 @@ Main Header
 }
 
 .header-style-v1 .header-inner .c-box .logo-inner .logo img {
-  max-width: 110px;
+  max-width: 170px;
 }
 
 .header-style-v1 .header-inner .c-box .logo-inner .search-btn a {
@@ -25273,7 +25273,7 @@ Chat Widget
 
 
   .boxcar-banner-section-nine .banner-content .content-box {
-    margin-top: 100px;
+    margin: 180px 0px;
   }
 
   .boxcar-pricing-section-five .content-column .inner-column {
@@ -25802,6 +25802,7 @@ Chat Widget
   .boxcar-banner-section-four .banner-slider-v4 .slick-dots {
     margin-left: 0;
     left: 15px;
+    display: none !important;
   }
 
   .cars-section-six {
@@ -27714,7 +27715,8 @@ Chat Widget
   margin-top: -12px;
   position: relative;
   z-index: 100;
-
+  display: flex;
+  align-items: center;
 }
 
 .layout-search.style1 .box-content-search {
@@ -29467,6 +29469,9 @@ li.nav-sub.mm-listitem .mm-listitem__btn {
 @media (min-width: 991px) {
   .gallery-sec .image-column-two {
     padding-left: 0;
+  }
+  .header-style-v1 .header-inner {
+    padding: 28px 0 0;
   }
 }
 
