@@ -6375,7 +6375,7 @@ Section Title
 
 ***/
 .boxcar-banner-section-nine {
-  background-image: url(../images/banner/banner.jpg);
+  /* background-image: url(../images/banner/banner.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -25730,6 +25730,9 @@ Chat Widget
 
 /* Medium devices */
 @media (max-width: 991px) {
+  .boxcar-banner-section-four .banner-slider-v4 .slick-track .banner-slide > img, .boxcar-banner-section-four .banner-slider-v4 .slick-list .banner-slide > img {
+    margin-top: 100px;
+  }
   .cars-block-two .inner-box {
     margin-bottom: 25px;
   }
@@ -25917,9 +25920,9 @@ Chat Widget
   .boxcar-banner-section-nine .banner-content {
     width: 100%;
     padding: 30px 15px 0 15px;
-    position: static;
+    /* position: static;
     -webkit-transform: unset;
-    transform: unset;
+    transform: unset; */
   }
 
   .boxcar-banner-section-nine .banner-content .form-tab-pane form {
@@ -25941,11 +25944,17 @@ Chat Widget
   }
 
   .boxcar-banner-section-nine .banner-content .content-box h2 {
-    font-size: 50px;
+    font-size: 40px;
+  margin-bottom: 25px;
   }
-
+  .boxcar-banner-section-nine .banner-content .content-box span {
+    margin-bottom: 20px;
+  }
+  .boxcar-banner-section-nine .banner-content .content-box .btn-box {
+    margin-bottom: 30px;
+  }
   .boxcar-banner-section-nine .container {
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
   }
 
   .boxcar-pricing-section-four.v9 .content-column .inner-column {
@@ -26877,7 +26886,8 @@ Chat Widget
   }
 
   .blog-section {
-    padding: 90px 0;
+    padding-top: 70px;
+    padding-bottom: 20px;
   }
 
   .header-style-v1.style-two {
@@ -27341,6 +27351,36 @@ Chat Widget
 
 /* Extra small devices */
 @media (max-width: 416px) {
+  /* .boxcar-testimonial-section-four {
+    padding: ;
+  } */
+  .cars-section-nine, .boxcar-testimonial-section-four {
+    padding: 40px 0px 80px;
+  }
+  .why-choose-us-section-four {
+    padding: 30px 0px;
+  }
+  .cars-section-nine .boxcar-title {
+    margin-bottom: 16px;
+  }
+  .boxcar-banner-section-nine .banner-content .content-box span {
+    font-size: 14px;
+  }
+  .boxcar-banner-section-nine .banner-content .content-box .btn-box .read-more {
+    padding: 7px 16px;
+  }
+  .boxcar-banner-section-nine .banner-content .content-box {
+    margin-top: 230px;
+  }
+  .boxcar-banner-section-nine .banner-content .content-box .btn-box {
+    margin-bottom: 5px;
+  }
+  .boxcar-banner-section-nine .banner-content .content-box span {
+    margin-bottom: 5px;
+  }
+  .boxcar-banner-section-four .banner-slider-v4 .slick-track .banner-slide > img, .boxcar-banner-section-four .banner-slider-v4 .slick-list .banner-slide > img {
+    margin-top: 105px;
+  }
   .header-style-v1 .header-inner .right-box>a {
     display: none;
   }
@@ -27394,7 +27434,11 @@ Chat Widget
   }
 
   .boxcar-title h2 {
-    font-size: 32px;
+    font-size: 26px;
+    margin-bottom: 0px;
+  }
+  .boxcar-title, .blog-section .boxcar-title{
+    margin-bottom: 20px;
   }
 
   .blog-blockt-two .inner-box .title {
@@ -27484,17 +27528,18 @@ Chat Widget
   }
 
   .boxcar-banner-section-nine .banner-content .content-box h2 {
-    font-size: 40px;
+    font-size: 20px;
+    margin-bottom: 5px;
   }
 
   .boxcar-banner-section-nine .banner-content .content-box .btn-box {
-    display: block;
+    display: flex;
   }
 
   .boxcar-banner-section-nine .banner-content .content-box .btn-box .read-more {
     margin-right: 0;
     width: 100%;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
   }
 
   .blog-section-three {
@@ -29483,6 +29528,9 @@ li.nav-sub.mm-listitem .mm-listitem__btn {
 }
 
 @media (max-width: 991px) {
+  .mobile-navigation rect {
+    fill: #000 !important;
+  }
   .inventory-section .gallery-sec .image-column .inner-column {
     margin-bottom: 12px;
   }
@@ -29503,6 +29551,9 @@ li.nav-sub.mm-listitem .mm-listitem__btn {
   .gallery-sec .item3,
   .gallery-sec .item5 {
     padding-left: 6px;
+  }
+  .header-style-v1 {
+    background-color: #fff;
   }
 }
 
