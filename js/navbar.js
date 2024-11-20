@@ -61,6 +61,7 @@ const navbarHtml = `<div class="header-inner">
                 <nav class="nav main-menu">
                     <ul class="navigation" id="navbar">
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
                         <li><a href="cars.html">Cars</a></li>
                         <li><a href="#">Insurance</a></li>
                         <li><a href="#">Finance</a></li>

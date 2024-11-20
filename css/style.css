@@ -29528,7 +29528,7 @@ li.nav-sub.mm-listitem .mm-listitem__btn {
 }
 
 @media (max-width: 991px) {
-  .mobile-navigation rect {
+  .home-page .mobile-navigation rect {
     fill: #000 !important;
   }
   .inventory-section .gallery-sec .image-column .inner-column {
