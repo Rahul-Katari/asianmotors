@@ -35,10 +35,14 @@ const footerHtml = `<div class="footer-top">
                             <h4 class="widget-title">Quick Links</h4>
                             <div class="widget-content">
                                 <ul class="user-links style-two">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="#">Cars</a></li>
+                                    <li><a href="#">Insurance</a></li>
+                                    <li><a href="#">Finance</a></li>
+                                    <li><a href="#">Sell Your Car</a></li>
                                     <li><a href="#">Blogs</a></li>
-                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="faq.html">FAQ's</a></li>
+                                    <li><a href="privacy.html">Privacy policy</a></li>
+                                    <li><a href="terms.html">Terms & Conditions</a></li>
                                 </ul>
                             </div>
                         </div>

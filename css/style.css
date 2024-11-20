@@ -15298,7 +15298,7 @@ Section Title
 }
 
 .faq-inner-section .faqs-section .accordion.block.active-block {
-  background-color: #F9FBFC;
+  background-color: #fceeee;
 }
 
 .faq-inner-section .faqs-section .widget-accordion .block .acc-btn {
@@ -19609,7 +19609,7 @@ Chat Widget
 
 .contact-us-section .map-sec .goole-iframe iframe {
   width: 100%;
-  height: 600px;
+  height: 350px;
   border-radius: 10px;
 }
 
