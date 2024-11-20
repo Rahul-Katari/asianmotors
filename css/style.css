@@ -19932,7 +19932,7 @@ Chat Widget
   color: var(--theme-color1);
   display: inline-block;
   border-radius: 120px;
-  background: var(--bg-3, #E9F2FF);
+  background: var(--bg-3, #fceeee);
   padding: 7px 20px 5px;
 }
 
@@ -20484,7 +20484,7 @@ Chat Widget
 
 .inventory-section .inspection-column .inner-column .features-sec .list-column .inner-column .feature-list li i {
   color: var(--theme-color1);
-  background-color: #eef0fc;
+  background-color: #fceeee;
   width: 21px;
   height: 21px;
   line-height: 21px;
