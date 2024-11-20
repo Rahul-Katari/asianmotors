@@ -13,35 +13,35 @@ const navbarHtml = `<div class="header-inner">
                             tabindex="2" value="" aria-required="true" required=""></div>
                     <div class="box-content-search" id="box-content-search">
                         <ul class="box-car-search">
-                            <li><a href="inventory-page-single.html" class="car-search-item">
+                            <li><a href="car-details.html" class="car-search-item">
                                     <div class="box-img"><img src="images/resource/car-search.jpg" alt="img"></div>
                                     <div class="info">
                                         <p class="name">Audi, Q5 - 2023 C300e AMG Line Night Ed Premium Plus 5dr
                                             9G-Tronic</p><span class="price">$399</span>
                                     </div>
                                 </a></li>
-                            <li><a href="inventory-page-single.html" class="car-search-item">
+                            <li><a href="car-details.html" class="car-search-item">
                                     <div class="box-img"><img src="images/resource/car-search.jpg" alt="img"></div>
                                     <div class="info">
                                         <p class="name">Audi, Q5 - 2023 C300e AMG Line Night Ed Premium Plus 5dr
                                             9G-Tronic</p><span class="price">$399</span>
                                     </div>
                                 </a></li>
-                            <li><a href="inventory-page-single.html" class="car-search-item">
+                            <li><a href="car-details.html" class="car-search-item">
                                     <div class="box-img"><img src="images/resource/car-search.jpg" alt="img"></div>
                                     <div class="info">
                                         <p class="name">Audi, Q5 - 2023 C300e AMG Line Night Ed Premium Plus 5dr
                                             9G-Tronic</p><span class="price">$399</span>
                                     </div>
                                 </a></li>
-                            <li><a href="inventory-page-single.html" class="car-search-item">
+                            <li><a href="car-details.html" class="car-search-item">
                                     <div class="box-img"><img src="images/resource/car-search.jpg" alt="img"></div>
                                     <div class="info">
                                         <p class="name">Audi, Q5 - 2023 C300e AMG Line Night Ed Premium Plus 5dr
                                             9G-Tronic</p><span class="price">$399</span>
                                     </div>
                                 </a></li>
-                        </ul><a href="inventory-page-single.html" class="btn-view-search">View Details <svg width="14"
+                        </ul><a href="car-details.html" class="btn-view-search">View Details <svg width="14"
                                 height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_3114_6864)">
                                     <path
@@ -61,8 +61,10 @@ const navbarHtml = `<div class="header-inner">
                 <nav class="nav main-menu">
                     <ul class="navigation" id="navbar">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
                         <li><a href="cars.html">Cars</a></li>
+                        <li><a href="#">Insurance</a></li>
+                        <li><a href="#">Finance</a></li>
+                        <li><a href="#">Sell Your Car</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="faq.html">FAQ's</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
