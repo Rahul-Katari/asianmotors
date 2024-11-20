@@ -14,7 +14,8 @@ S.addons={offcanvas:function(){var e=this;if(this.opts.offCanvas){var t=function
 
 
 // Mobile Navigation
-if($('#nav-mobile').length){
+$('onload', function() {
+  if($('#nav-mobile').length){
     jQuery(function ($) {
       var $navbar = $('#navbar');
       var $mobileNav = $('#nav-mobile');
@@ -34,3 +35,5 @@ if($('#nav-mobile').length){
       });
     });
 }
+})
+
