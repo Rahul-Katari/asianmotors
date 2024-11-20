@@ -62,10 +62,10 @@ const navbarHtml = `<div class="header-inner">
                     <ul class="navigation" id="navbar">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="cars.html">Cars</a></li>
-                        <li><a href="#">Insurance</a></li>
-                        <li><a href="#">Finance</a></li>
+                        <li><a href="cars.html">Listed Cars</a></li>
                         <li><a href="#">Sell Your Car</a></li>
+                        <li><a href="#">Finance</a></li>
+                        <li><a href="#">Insurance</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="faq.html">FAQ's</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
