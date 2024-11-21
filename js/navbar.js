@@ -3,7 +3,7 @@ const navbarHtml = `<div class="header-inner">
         <div class="c-box">
             <div class="logo-inner">
                 <div class="logo"><a href="index.html"><img src="images/logo.png" alt="" title="Boxcar"></a></div>
-                <div class="layout-search">
+                <div class="layout-search d-none">
                     <div class="search-box"><svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -64,10 +64,10 @@ const navbarHtml = `<div class="header-inner">
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="cars.html">Listed Cars</a></li>
                         <li><a href="#">Sell Your Car</a></li>
+                        <li><a href="#">Our Showroom</a></li>
                         <li><a href="#">Finance</a></li>
                         <li><a href="#">Insurance</a></li>
                         <li><a href="#">Blog</a></li>
-                        <li><a href="faq.html">FAQ's</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </nav>
