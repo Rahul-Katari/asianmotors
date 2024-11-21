@@ -94,5 +94,28 @@ const navbarHtml = `<div class="header-inner">
 <div id="nav-mobile"></div>`;
 
 $('onload', function () {
+    const navbar = $('header');
     $('header').html(navbarHtml);
+    let lastScrollTop = 0;
+
+    $(window).on('scroll', function () {
+        const currentScroll = $(this).scrollTop();
+
+        if (currentScroll > lastScrollTop) {
+            // User scrolling down - hide the navbar
+            navbar.css({ position: 'fixed', backgroundColor: '#fff'});
+            navbar.addClass('sticky-nav shadow');
+        } if(currentScroll == 0){
+            navbar.css({transform: 'translateY(0)', backgroundColor: 'transparent'});
+            navbar.removeClass('sticky-nav shadow');
+        }
+         else if (currentScroll < lastScrollTop) {
+            // User scrolling up - show the navbar
+            navbar.css({transform: 'translateY(0)'});
+
+            // navbar.css('transform', 'translateY(0)');
+        }
+
+        lastScrollTop = currentScroll;
+    });
 })
