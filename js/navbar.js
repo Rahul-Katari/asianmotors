@@ -106,7 +106,12 @@ $('onload', function () {
             navbar.css({ position: 'fixed', backgroundColor: '#fff'});
             navbar.addClass('sticky-nav shadow');
         } if(currentScroll == 0){
-            navbar.css({transform: 'translateY(0)', backgroundColor: 'transparent'});
+            if(window.location.pathname === "/" || window.location.pathname.includes("index")){
+                navbar.css({transform: 'translateY(0)', backgroundColor: 'transparent'});
+            }
+            else{
+                navbar.css({backgroundColor: '', })
+            }
             navbar.removeClass('sticky-nav shadow');
         }
          else if (currentScroll < lastScrollTop) {
