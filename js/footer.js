@@ -2,8 +2,8 @@ const footerHtml = `<div class="footer-top">
     <div class="boxcar-container">
         <div class="right-box">
             <div class="top-left wow fadeInUp">
-                <h6 class="title">Join Asian Motors</h6>
-                <div class="text">Receive pricing updates, shopping tips & more!</div>
+                <h6 class="title">Join the Asian Motors Family</h6>
+                <div class="text">Stay ahead with the latest car deals, expert tips, and exclusive updates! Sign up now and never miss an offer.</div>
             </div>
             <div class="subscribe-form wow fadeInUp" data-wow-delay="100ms">
                 <form method="post" action="#">
