@@ -63,10 +63,10 @@ const navbarHtml = `<div class="header-inner">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="cars.html">Listed Cars</a></li>
-                        <li><a href="#">Sell Your Car</a></li>
+                        <li><a href="sellyourcar.html">Sell Your Car</a></li>
                         <li><a href="#">Our Showroom</a></li>
-                        <li><a href="#">Finance</a></li>
-                        <li><a href="#">Insurance</a></li>
+                        <li><a href="finance.html">Finance</a></li>
+                        <li><a href="insurance.html">Insurance</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
@@ -94,5 +94,33 @@ const navbarHtml = `<div class="header-inner">
 <div id="nav-mobile"></div>`;
 
 $('onload', function () {
+    const navbar = $('header');
     $('header').html(navbarHtml);
+    let lastScrollTop = 0;
+
+    $(window).on('scroll', function () {
+        const currentScroll = $(this).scrollTop();
+
+        if (currentScroll > lastScrollTop) {
+            // User scrolling down - hide the navbar
+            navbar.css({ position: 'fixed', backgroundColor: '#fff'});
+            navbar.addClass('sticky-nav shadow');
+        } if(currentScroll == 0){
+            if(window.location.pathname === "/" || window.location.pathname.includes("index")){
+                navbar.css({transform: 'translateY(0)', backgroundColor: 'transparent'});
+            }
+            else{
+                navbar.css({backgroundColor: '', })
+            }
+            navbar.removeClass('sticky-nav shadow');
+        }
+         else if (currentScroll < lastScrollTop) {
+            // User scrolling up - show the navbar
+            navbar.css({transform: 'translateY(0)'});
+
+            // navbar.css('transform', 'translateY(0)');
+        }
+
+        lastScrollTop = currentScroll;
+    });
 })

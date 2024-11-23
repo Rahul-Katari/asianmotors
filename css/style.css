@@ -1829,6 +1829,9 @@ Main Header
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
+.sticky-nav .main-menu .navigation>li>a {
+  color: #000;
+}
 
 .boxcar-header .right-box {
   position: relative;
@@ -29429,7 +29432,10 @@ li.nav-sub.mm-listitem .mm-listitem__btn {
   position: unset !important;
   padding-bottom: 80px;
 }
-
+.sticky-nav.boxcar-header.cus-style-1{
+  position: fixed !important;
+  padding-bottom: 0px;
+}
 .box-bookmark {
   width: 36px;
   height: 36px;
@@ -29445,6 +29451,9 @@ li.nav-sub.mm-listitem .mm-listitem__btn {
 @media (max-width: 1199px) {
   .boxcar-header.cus-style-1 {
     padding: 20px 0px 100px !important;
+  }
+  .sticky-nav.boxcar-header.cus-style-1 {
+    padding: 20px 0px 20px !important;
   }
 
   .about-inner-one .galler-section .exp-block .inner-box .exp-box {
@@ -29525,10 +29534,16 @@ li.nav-sub.mm-listitem .mm-listitem__btn {
   .header-style-v1 .header-inner {
     padding: 28px 0 0;
   }
+  .sticky-nav .header-inner {
+    padding: 10px 0 !important;
+  }
 }
 
 @media (max-width: 991px) {
   .home-page .mobile-navigation rect {
+    fill: #000 !important;
+  }
+  .sticky-nav .mobile-navigation rect {
     fill: #000 !important;
   }
   .inventory-section .gallery-sec .image-column .inner-column {
