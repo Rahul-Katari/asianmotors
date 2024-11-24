@@ -36,7 +36,7 @@ const footerHtml = `<div class="footer-top">
                             <div class="widget-content">
                                 <ul class="user-links style-two">
                                     <li><a href="#">Insurance</a></li>
-                                    <li><a href="#">Finance</a></li>
+                                    <li><a href="#">EMI Calculator</a></li>
                                     <li><a href="#">Sell Your Car</a></li>
                                     <li><a href="#">Blogs</a></li>
                                     <li><a href="contact.html">Contact Us</a></li>
