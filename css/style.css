@@ -6386,7 +6386,6 @@ Section Title
 }
 
 .background-video {
-  
   width: 100vw;
   height: 100vh;
   object-fit: cover;
@@ -6987,6 +6986,13 @@ Section Title
 @media (max-width: 768px) {
   .boxcar-brand-section-four {
     padding-top: 180px;
+  }
+  .background-video {
+    height: 100%;
+    margin-top: 110px;
+  }
+  .boxcar-banner-section-nine::before {
+    background: transparent;
   }
 
 }
@@ -27373,13 +27379,13 @@ Chat Widget
     padding: 7px 16px;
   }
   .boxcar-banner-section-nine .banner-content .content-box {
-    margin-top: 230px;
+    margin-top: 245px;
   }
   .boxcar-banner-section-nine .banner-content .content-box .btn-box {
     margin-bottom: 5px;
   }
   .boxcar-banner-section-nine .banner-content .content-box span {
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
   .boxcar-banner-section-four .banner-slider-v4 .slick-track .banner-slide > img, .boxcar-banner-section-four .banner-slider-v4 .slick-list .banner-slide > img {
     margin-top: 105px;
@@ -27532,7 +27538,7 @@ Chat Widget
 
   .boxcar-banner-section-nine .banner-content .content-box h2 {
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
 
   .boxcar-banner-section-nine .banner-content .content-box .btn-box {
