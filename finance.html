@@ -1,124 +1,354 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMI Calculator</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .result-box {
-            background-color: #f8f9fa;
-            border: 1px solid #dee2e6;
-            padding: 20px;
-            border-radius: 5px;
-        }
-    </style>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <title>Asian Motors</title>
+        <!-- Stylesheets -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+        <link rel="stylesheet" type="text/css" href="css/slick.css">
+        <link href="css/mmenu.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <link rel="icon" href="images/favicon.png" type="image/x-icon">
+        <!-- Responsive -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <style>
+            .car-img {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+                border-radius: 8px;
+            }
+            .range-slider {
+                width: 100%;
+            }
+            .result-box {
+                border: 1px solid #dee2e6;
+                border-radius: 8px;
+                padding: 20px;
+                margin-top: 20px;
+            }
+            .brand-select {
+                margin-bottom: 15px;
+            }
+            .card{
+                height: 100%;
+            }
+            /* Styling the slider track */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: #e72400;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #e72400;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #e72400;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+#monthlyEMI{
+    color: #e72400;
+}
+
+
+
+        </style>
+    </head>
+
 <body>
-    <div class="container my-5">
-        <h1 class="text-center mb-4">EMI Calculator</h1>
-        <div class="card p-4">
-            <form>
-                <!-- Car Selection -->
-                <div class="mb-3">
-                    <label for="carBrand" class="form-label">Car Brand</label>
-                    <select id="carBrand" class="form-select">
-                        <option value="Bentley">Bentley</option>
-                        <option value="Mercedes">Mercedes</option>
-                        <option value="BMW">BMW</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="carModel" class="form-label">Car Model</label>
-                    <select id="carModel" class="form-select">
-                        <option value="BentaygaV8">2019 Bentley Bentayga V8</option>
-                        <option value="ContinentalGT">2020 Bentley Continental GT</option>
-                    </select>
-                </div>
+    <div class="boxcar-wrapper">
 
-                <!-- Car Price -->
-                <div class="mb-3">
-                    <label for="carPrice" class="form-label">Car Price (₹)</label>
-                    <input type="number" id="carPrice" class="form-control" value="29900000" readonly>
-                </div>
+            <!-- Main Header-->
+            <header class="boxcar-header header-style-v1 style-two inner-header cus-style-1">
 
-                <!-- Down Payment -->
-                <div class="mb-3">
-                    <label for="downPayment" class="form-label">Down Payment (₹)</label>
-                    <input type="range" id="downPayment" class="form-range" min="0" max="29900000" step="100000" value="5980000" onchange="updateDownPayment()">
-                    <input type="number" id="downPaymentValue" class="form-control mt-2" readonly>
-                </div>
+                <div id="nav-mobile"></div>
+            </header>
 
-                <!-- Annual Interest Rate -->
-                <div class="mb-3">
-                    <label for="interestRate" class="form-label">Annual Interest Rate (%)</label>
-                    <input type="range" id="interestRate" class="form-range" min="0" max="20" step="0.1" value="10.5" onchange="updateInterestRate()">
-                    <input type="number" id="interestRateValue" class="form-control mt-2" readonly>
-                </div>
+            <section class="contact-us-section layout-radius">
+                <div class="boxcar-container">
+                    <!-- boxcar-title -->
+                    <div class="boxcar-title-three wow fadeInUp">
+                        <ul class="breadcrumb">
+                            <li><a href="index.html">Home</a></li>
+                            <li><span>EMI Calculator</span></li>
+                        </ul>
+                    </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <div class="card shadow">
+                                    <div class="card-header border-bottom-0">
+                                        <h3 class="text-center mb-0 fw-bold">EMI CALCULATOR</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <!-- Vehicle Selection -->
+                                        <div class="brand-select">
+                                            <select class="form-select mb-3" id="carBrand">
+                                                <option value="">Select Brand</option>
+                                            </select>
+                                            <select class="form-select mb-3" id="carModel">
+                                                <option value="">Select Model</option>
+                                            </select>
+                                        </div>
+                
+                                        <!-- Vehicle Display -->
+                                        <div class="text-center mb-4">
+                                            <!-- <img src="/api/placeholder/300/200" alt="Bentley Bentayga" class="car-img"> -->
+                                            <h5 class="mt-3">2019 Bentley Bentayga V8</h5>
+                                            <h6 class="text-muted">₹2,95,00,000</h6>
+                                        </div>
+                
+                                        <!-- Down Payment Slider -->
+                                        <div class="mb-4">
+                                            <label class="form-label">Down Payment (Minimum 30%)</label>
+                                            <input type="range" class="form-range" id="downPaymentSlider" 
+                                                   min="30" max="90" value="30">
+                                            <div class="d-flex justify-content-between">
+                                                <span>₹</span>
+                                                <span id="downPaymentValue">88,50,000</span>
+                                            </div>
+                                        </div>
+                
+                                        <!-- Interest Rate Slider -->
+                                        <div class="mb-4">
+                                            <label class="form-label">Annual Interest Rate (%)</label>
+                                            <input type="range" class="form-range" id="interestSlider" 
+                                                   min="1" max="20" value="10.5">
+                                            <div class="d-flex justify-content-between">
+                                                <span>%</span>
+                                                <span id="interestValue">10.5</span>
+                                            </div>
+                                        </div>
+                
+                                        <!-- Tenure Slider -->
+                                        <div class="mb-4">
+                                            <label class="form-label">Term/Period (Months)</label>
+<input type="range" class="form-range" id="tenureSlider" min="12" max="84" value="60">
+<div class="d-flex justify-content-between">
+    <span>Months</span>
+    <span id="tenureValue">60</span>
+</div>
 
-                <!-- Loan Tenure -->
-                <div class="mb-3">
-                    <label for="loanTenure" class="form-label">Loan Tenure (Months)</label>
-                    <input type="range" id="loanTenure" class="form-range" min="12" max="120" step="12" value="60" onchange="updateLoanTenure()">
-                    <input type="number" id="loanTenureValue" class="form-control mt-2" readonly>
-                </div>
-            </form>
+                                        </div>
+                
+                                        <!-- Results -->
+                                        <div class="result-box">
+                                            <div class="row">
+                                                <div class="col-md-6 d-flex flex-column align-items-center">
+                                                    <p>Total Interest Payable:</p>
+                                                    <h6 id="totalInterest">₹53,28,045.82</h6>
+                                                </div>
+                                                <div class="col-md-6 d-flex flex-column align-items-center">
+                                                    <p>Total Amount to Pay:</p>
+                                                    <h6 id="totalAmount">₹2,74,48,045.82</h6>
+                                                </div>
+                                            </div>
+                                            <div class="text-center mt-3">
+                                                <h5>Monthly Payment (EMI)</h5>
+                                                <h3  id="monthlyEMI">₹4,82,534.10</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-            <!-- Results -->
-            <div class="result-box mt-4">
-                <h5>Total Interest Payment: ₹<span id="totalInterest">0</span></h5>
-                <h5>Total Amount to Pay: ₹<span id="totalPayment">0</span></h5>
-                <h5>Monthly EMI: ₹<span id="monthlyEMI">0</span></h5>
-            </div>
-        </div>
+                 <!-- main footer -->
+        <footer class="boxcar-footer footer-style-one v1 cus-st-1">
+          
+        </footer>
+        <!-- End boxcar-footer -->
+
     </div>
 
-    <!-- Bootstrap JS and Dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/slick-animation.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/mixitup.js"></script>
+    <script src="js/knob.js"></script>
+    <script src="js/mmenu.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+
     <script>
-        // Update values dynamically
-        function updateDownPayment() {
-            const downPayment = document.getElementById('downPayment').value;
-            document.getElementById('downPaymentValue').value = downPayment;
-            calculateEMI();
-        }
+        const carData = {
+    BENTLEY: [
+        { model: "2019 BENTLEY BENTAYGA V8", price: 29500000, img: "images/bentley_bentayga.jpg" },
+        { model: "2020 BENTLEY CONTINENTAL GT", price: 31500000, img: "images/bentley_continental_gt.jpg" }
+    ],
+    BMW: [
+        { model: "2022 BMW X5", price: 7500000, img: "images/bmw_x5.jpg" },
+        { model: "2023 BMW 7 SERIES", price: 15000000, img: "images/bmw_7_series.jpg" }
+    ],
+    AUDI: [
+        { model: "2022 AUDI Q8", price: 9800000, img: "images/audi_q8.jpg" },
+        { model: "2023 AUDI A8", price: 12500000, img: "images/audi_a8.jpg" }
+    ]
+};
+const carBrand = document.getElementById('carBrand');
+const carModel = document.getElementById('carModel');
+const vehicleDisplay = document.querySelector('.text-center.mb-4');
 
-        function updateInterestRate() {
-            const interestRate = document.getElementById('interestRate').value;
-            document.getElementById('interestRateValue').value = interestRate;
-            calculateEMI();
-        }
+// Populate car brands dropdown and set default selection
+document.addEventListener('DOMContentLoaded', function () {
+    // Populate brands
+    Object.keys(carData).forEach(brand => {
+        const option = document.createElement('option');
+        option.value = brand;
+        option.textContent = brand;
+        carBrand.appendChild(option);
+    });
 
-        function updateLoanTenure() {
-            const loanTenure = document.getElementById('loanTenure').value;
-            document.getElementById('loanTenureValue').value = loanTenure;
-            calculateEMI();
-        }
+    // Set the default brand to the first one
+    const defaultBrand = Object.keys(carData)[0];
+    carBrand.value = defaultBrand;
 
-        // EMI Calculation Logic
-        function calculateEMI() {
-            const carPrice = parseFloat(document.getElementById('carPrice').value);
-            const downPayment = parseFloat(document.getElementById('downPayment').value);
-            const interestRate = parseFloat(document.getElementById('interestRate').value);
-            const loanTenure = parseInt(document.getElementById('loanTenure').value);
+    // Populate models based on the default brand
+    populateModels(defaultBrand);
 
-            const loanAmount = carPrice - downPayment;
-            const monthlyInterestRate = interestRate / 12 / 100;
-            const emi = loanAmount * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, loanTenure) / (Math.pow(1 + monthlyInterestRate, loanTenure) - 1);
+    // Set the default model to the first one of the selected brand
+    const defaultModel = carData[defaultBrand][0].model;
+    carModel.value = defaultModel;
 
-            const totalPayment = emi * loanTenure;
-            const totalInterest = totalPayment - loanAmount;
+    // Display the car details based on the default selection
+    displayCarDetails(defaultBrand, defaultModel);
+});
 
-            document.getElementById('monthlyEMI').innerText = emi.toFixed(2);
-            document.getElementById('totalPayment').innerText = totalPayment.toFixed(2);
-            document.getElementById('totalInterest').innerText = totalInterest.toFixed(2);
-        }
+// Handle brand selection to populate models
+carBrand.addEventListener('change', function () {
+    const selectedBrand = carBrand.value;
+    carModel.innerHTML = '<option value="">Select Model</option>'; // Reset models
 
-        // Initialize default values
-        updateDownPayment();
-        updateInterestRate();
-        updateLoanTenure();
+    if (carData[selectedBrand]) {
+        carData[selectedBrand].forEach(car => {
+            const option = document.createElement('option');
+            option.value = car.model;
+            option.textContent = car.model;
+            carModel.appendChild(option);
+        });
+    }
+
+    // Set default model to the first one after brand selection
+    const firstModel = carData[selectedBrand][0].model;
+    carModel.value = firstModel;
+
+    // Display car details for the selected brand and default model
+    displayCarDetails(selectedBrand, firstModel);
+});
+
+// Handle model selection to display car details
+carModel.addEventListener('change', function () {
+    const selectedBrand = carBrand.value;
+    const selectedModel = carModel.value;
+
+    displayCarDetails(selectedBrand, selectedModel);
+});
+
+// Function to populate models based on selected brand
+function populateModels(brand) {
+    carModel.innerHTML = '<option value="">Select Model</option>'; // Reset models
+
+    if (carData[brand]) {
+        carData[brand].forEach(car => {
+            const option = document.createElement('option');
+            option.value = car.model;
+            option.textContent = car.model;
+            carModel.appendChild(option);
+        });
+    }
+}
+
+// Function to display car details (image, name, price)
+function displayCarDetails(brand, model) {
+    const car = carData[brand].find(car => car.model === model);
+    if (car) {
+        vehicleDisplay.innerHTML = `
+            <h5 class="mt-3">${car.model}</h5>
+            <h6 class="text-muted">₹${car.price.toLocaleString('en-IN')}</h6>
+        `;
+        // Update car price for EMI calculations
+        carPrice = car.price;
+        calculateEMI();
+    }
+}
+
+// Format currency
+const formatCurrency = (amount) => {
+    return new Intl.NumberFormat('en-IN', {
+        style: 'currency',
+        currency: 'INR',
+        maximumFractionDigits: 2
+    }).format(amount);
+};
+
+// Calculate EMI
+function calculateEMI() {
+    const downPaymentPercent = parseFloat(downPaymentSlider.value);
+    const interestRate = parseFloat(interestSlider.value);
+    const tenureMonths = parseFloat(tenureSlider.value); // Now in months
+
+    const downPayment = (carPrice * downPaymentPercent) / 100;
+    const loanAmount = carPrice - downPayment;
+    const monthlyInterest = interestRate / 12 / 100;
+
+    const emi = loanAmount * monthlyInterest *
+               Math.pow(1 + monthlyInterest, tenureMonths) /
+               (Math.pow(1 + monthlyInterest, tenureMonths) - 1);
+
+    const totalPayment = emi * tenureMonths;
+    const totalInterestAmount = totalPayment - loanAmount;
+
+    // Update UI
+    downPaymentValue.textContent = formatCurrency(downPayment);
+    interestValue.textContent = interestRate.toFixed(1);
+    tenureValue.textContent = tenureMonths; // Display in months
+    monthlyEMI.textContent = formatCurrency(emi);
+    totalInterest.textContent = formatCurrency(totalInterestAmount);
+    totalAmount.textContent = formatCurrency(totalPayment);
+}
+
+// Add event listeners for sliders
+downPaymentSlider.addEventListener('input', calculateEMI);
+interestSlider.addEventListener('input', calculateEMI);
+tenureSlider.addEventListener('input', calculateEMI);
+
+// Initial population and calculation
+calculateEMI();
+
+
     </script>
 </body>
 </html>
