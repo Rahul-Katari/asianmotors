@@ -1829,6 +1829,7 @@ Main Header
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
+
 .sticky-nav .main-menu .navigation>li>a {
   color: #000;
 }
@@ -6389,7 +6390,8 @@ Section Title
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  z-index: -1; /* Ensure the video stays in the background */
+  z-index: -1;
+  /* Ensure the video stays in the background */
 }
 
 .boxcar-banner-section-nine:before {
@@ -6987,10 +6989,12 @@ Section Title
   .boxcar-brand-section-four {
     padding-top: 180px;
   }
+
   .background-video {
-    height: 100%;
+    height: 300px;
     margin-top: 110px;
   }
+
   .boxcar-banner-section-nine::before {
     background: transparent;
   }
@@ -25736,9 +25740,12 @@ Chat Widget
 
 /* Medium devices */
 @media (max-width: 991px) {
-  .boxcar-banner-section-four .banner-slider-v4 .slick-track .banner-slide > img, .boxcar-banner-section-four .banner-slider-v4 .slick-list .banner-slide > img {
+
+  .boxcar-banner-section-four .banner-slider-v4 .slick-track .banner-slide>img,
+  .boxcar-banner-section-four .banner-slider-v4 .slick-list .banner-slide>img {
     margin-top: 100px;
   }
+
   .cars-block-two .inner-box {
     margin-bottom: 25px;
   }
@@ -25951,14 +25958,17 @@ Chat Widget
 
   .boxcar-banner-section-nine .banner-content .content-box h2 {
     font-size: 40px;
-  margin-bottom: 25px;
+    margin-bottom: 25px;
   }
+
   .boxcar-banner-section-nine .banner-content .content-box span {
     margin-bottom: 20px;
   }
+
   .boxcar-banner-section-nine .banner-content .content-box .btn-box {
     margin-bottom: 30px;
   }
+
   .boxcar-banner-section-nine .container {
     /* padding-bottom: 50px; */
   }
@@ -27357,36 +27367,48 @@ Chat Widget
 
 /* Extra small devices */
 @media (max-width: 416px) {
+
   /* .boxcar-testimonial-section-four {
     padding: ;
   } */
-  .cars-section-nine, .boxcar-testimonial-section-four {
+  .cars-section-nine,
+  .boxcar-testimonial-section-four {
     padding: 40px 0px 80px;
   }
+
   .why-choose-us-section-four {
     padding: 30px 0px;
   }
+
   .cars-section-nine .boxcar-title {
     margin-bottom: 16px;
   }
+
   .boxcar-banner-section-nine .banner-content .content-box span {
     font-size: 14px;
   }
+
   .boxcar-banner-section-nine .banner-content .content-box .btn-box .read-more {
     padding: 7px 16px;
   }
+
   .boxcar-banner-section-nine .banner-content .content-box {
     margin-top: 245px;
   }
+
   .boxcar-banner-section-nine .banner-content .content-box .btn-box {
     margin-bottom: 5px;
   }
+
   .boxcar-banner-section-nine .banner-content .content-box span {
     margin-bottom: 0px;
   }
-  .boxcar-banner-section-four .banner-slider-v4 .slick-track .banner-slide > img, .boxcar-banner-section-four .banner-slider-v4 .slick-list .banner-slide > img {
+
+  .boxcar-banner-section-four .banner-slider-v4 .slick-track .banner-slide>img,
+  .boxcar-banner-section-four .banner-slider-v4 .slick-list .banner-slide>img {
     margin-top: 105px;
   }
+
   .header-style-v1 .header-inner .right-box>a {
     display: none;
   }
@@ -27443,7 +27465,9 @@ Chat Widget
     font-size: 20px;
     margin-bottom: 0px;
   }
-  .boxcar-title, .blog-section .boxcar-title{
+
+  .boxcar-title,
+  .blog-section .boxcar-title {
     margin-bottom: 20px;
   }
 
@@ -29435,10 +29459,12 @@ li.nav-sub.mm-listitem .mm-listitem__btn {
   position: unset !important;
   padding-bottom: 80px;
 }
-.sticky-nav.boxcar-header.cus-style-1{
+
+.sticky-nav.boxcar-header.cus-style-1 {
   position: fixed !important;
   padding-bottom: 0px;
 }
+
 .box-bookmark {
   width: 36px;
   height: 36px;
@@ -29455,6 +29481,7 @@ li.nav-sub.mm-listitem .mm-listitem__btn {
   .boxcar-header.cus-style-1 {
     padding: 20px 0px 100px !important;
   }
+
   .sticky-nav.boxcar-header.cus-style-1 {
     padding: 20px 0px 20px !important;
   }
@@ -29534,9 +29561,11 @@ li.nav-sub.mm-listitem .mm-listitem__btn {
   .gallery-sec .image-column-two {
     padding-left: 0;
   }
+
   .header-style-v1 .header-inner {
     padding: 28px 0 0;
   }
+
   .sticky-nav .header-inner {
     padding: 10px 0 !important;
   }
@@ -29546,9 +29575,11 @@ li.nav-sub.mm-listitem .mm-listitem__btn {
   .home-page .mobile-navigation rect {
     fill: #000 !important;
   }
+
   .sticky-nav .mobile-navigation rect {
     fill: #000 !important;
   }
+
   .inventory-section .gallery-sec .image-column .inner-column {
     margin-bottom: 12px;
   }
@@ -29570,6 +29601,7 @@ li.nav-sub.mm-listitem .mm-listitem__btn {
   .gallery-sec .item5 {
     padding-left: 6px;
   }
+
   .header-style-v1 {
     background-color: #fff;
   }
@@ -30325,7 +30357,7 @@ li.nav-sub.mm-listitem .mm-listitem__btn {
   margin: 0 2px;
 }
 
-.boxcar-team-section-three img{
+.boxcar-team-section-three img {
   height: 200px !important;
 }
 
@@ -30333,8 +30365,6 @@ li.nav-sub.mm-listitem .mm-listitem__btn {
 .list-style-disc {
   list-style: disc !important;
 }
-
-
 
 
 .gallery-item img {
@@ -30444,5 +30474,10 @@ right: 20px;
     max-width: 95%;
     max-height: 95%;
 }
+}
+
+.list-group-disc li {
+  list-style: disc;
+  margin-left: 16px;
 }
 

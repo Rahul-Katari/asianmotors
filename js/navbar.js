@@ -67,7 +67,7 @@ const navbarHtml = `<div class="header-inner">
                         <li><a href="ourshowroom.html">Our Showroom</a></li>
                         <li><a href="finance.html">EMI Calculator</a></li>
                         <li><a href="insurance.html">Insurance</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </nav>
