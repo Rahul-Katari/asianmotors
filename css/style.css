@@ -6400,7 +6400,7 @@ Section Title
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 98%;
   background: #050B20;
   opacity: 0.4;
 }
@@ -6992,11 +6992,11 @@ Section Title
 
   .background-video {
     height: 300px;
-    margin-top: 110px;
+    margin-top: 105px;
   }
 
   .boxcar-banner-section-nine::before {
-    background: transparent;
+    /* background: transparent; */
   }
 
 }
@@ -23124,7 +23124,7 @@ Chat Widget
 
 .boxcar-footer .widgets-section {
   position: relative;
-  z-index: 999;
+  /* z-index: 999; */
 }
 
 .boxcar-footer .footer-column {
