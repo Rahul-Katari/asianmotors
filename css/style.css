@@ -1280,7 +1280,7 @@ Scroll To Top style
 }
 
 .theme-btn:hover {
-  background: #0146A6 !important;
+  background: #a51d05 !important;
   border-color: transparent !important;
 }
 
@@ -14198,7 +14198,7 @@ Section Title
 }
 
 .services-inner-section .calculater-sec .content-column form .theme-btn {
-  background: #405FF2;
+  background: #e72400;
   color: #fff;
   height: 54px;
   line-height: 54px;
@@ -16956,10 +16956,7 @@ Section Title
   margin-bottom: 110px;
 }
 
-.about-inner-one .upper-box .boxcar-title {
-  margin-bottom: 51px;
-  max-width: 445px;
-}
+
 
 .about-inner-one .upper-box .boxcar-title h2 {
   margin-bottom: 36px;
@@ -19693,7 +19690,7 @@ Chat Widget
 }
 
 .contact-us-section .calculater-sec .content-column form .theme-btn {
-  background: #405FF2;
+  background: #e72400;
   color: #fff;
   height: 54px;
   line-height: 54px;
@@ -30330,4 +30327,9 @@ li.nav-sub.mm-listitem .mm-listitem__btn {
 
 .boxcar-team-section-three img{
   height: 200px !important;
+}
+
+
+.list-style-disc {
+  list-style: disc !important;
 }
