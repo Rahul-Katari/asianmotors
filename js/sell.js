@@ -43,51 +43,20 @@ function nextPrev(n) {
 }
 
 function validateForm() {
-    const inputs = document.getElementsByClassName("step")[currentTab].getElementsByTagName("input");
-    const selects = document.getElementsByClassName("step")[currentTab].getElementsByTagName("select");
+    const currentStep = document.getElementsByClassName("step")[currentTab];
+    const inputs = currentStep.querySelectorAll("[required]");
     let valid = true;
 
-    // Validate inputs
-    for (const input of inputs) {
-        if (input.value.trim() === "") {
-            input.classList.add("is-invalid");
-            showError(input.parentNode, "This field is required");
+    // Use Bootstrap validation classes
+    inputs.forEach(input => {
+        if (!input.checkValidity()) {
+            input.parentNode.classList.add("is-invalid");
             valid = false;
         } else {
-            input.classList.remove("is-invalid");
-            hideError(input);
+            input.parentNode.classList.remove("is-invalid");
+            input.parentNode.classList.add("is-valid");
         }
-    }
-
-    // Validate selects
-    for (const select of selects) {
-        if (select.value.trim() === "") {
-            select.classList.add("is-invalid");
-            showError(select.parentNode, "Please select an option");
-            valid = false;
-        } else {
-            select.classList.remove("is-invalid");
-            hideError(select);
-        }
-    }
+    });
 
     return valid;
-}
-
-function showError(element, message) {
-    // Create an error message element if it doesn't exist
-    let error = element.nextElementSibling;
-    if (!error || !error.classList.contains("error-message")) {
-        error = document.createElement("span");
-        error.className = "error-message text-danger";
-        element.parentNode.appendChild(error);
-    }
-    error.innerText = message;
-}
-
-function hideError(element) {
-    const error = element.nextElementSibling;
-    if (error && error.classList.contains("error-message")) {
-        error.remove();
-    }
 }
