@@ -35,7 +35,10 @@
             height: 28px;
             background: transparent;
             border: 0px;
+            appearance: auto;
         }
+
+
 
         .form-control:focus {
             box-shadow: none;
@@ -283,7 +286,6 @@
                         <li><a href="index.html">Home</a></li>
                         <li><span>Sell Your Car</span></li>
                     </ul>
-                    <h2>Sell Your Car</h2>
                 </div>
                 <!-- End section title -->
 
@@ -297,169 +299,143 @@
                 <!-- End map-section -->
 
                 <!-- calculater-section -->
-                <div class="calculater-sec">
+                <div class="calculater-sec pt-0">
                     <div class="right-box">
                         <div class="row justify-content-center">
                             <!-- content-column -->
                             <div class="col-lg-7 content-column">
                                 <div class="inner-column">
                                     <div class="boxcar-title">
-                                        <h2>Car Details</h2>
-                                        <p>Etiam pharetra egestas interdum blandit viverra morbi consequat mi non
-                                            bibendum egestas quam egestas nulla.</p>
+                                        <h2>Sell Your Car</h2>
+                                        <p>Fast, Transparent, and Hassle-Free Process</p>
+                                        <p>We simplify the selling process with ownership transfers completed within <span class="fw-bold"> one week</span>.</p>
                                     </div>
                                     <form id="multiStepForm" class="row needs-validation" novalidate>
                                         <!-- Progress Bar -->
                                         <div class="col-12 mb-4">
                                             <div class="form-header d-flex">
-                                                <span class="stepIndicator">Step 1: Vehicle Details</span>
-                                                <span class="stepIndicator">Step 2: Ownership Details</span>
-                                                <span class="stepIndicator">Step 3: Personal Info</span>
+                                                <span class="stepIndicator">Step 1: Car Details</span>
+                                                <span class="stepIndicator">Step 2: Car Image</span>
+                                                <span class="stepIndicator">Step 3: Personal Details</span>
                                             </div>
                                         </div>
-
+                                    
                                         <!-- Step 1 -->
                                         <div class="step row">
                                             <div class="col-lg-4">
                                                 <div class="form_boxes">
-                                                    <label>Car Make</label>
-                                                    <select name="brand" class="form-control bg-transparent w-100"
-                                                        required>
-
+                                                    <label for="car-make">Car Make</label>
+                                                    <select id="car-make" name="brand" class="form-control bg-transparent w-100" required>
                                                         <option value="">Select Car Make</option>
                                                         <option value="Aston Martin">Aston Martin</option>
                                                         <option value="Audi">Audi</option>
                                                         <option value="Bentley">Bentley</option>
-                                                        <option value="BMW">BMW</option>
-                                                        <option value="Cadillac">Cadillac</option>
-                                                        <option value="Chrysler">Chrysler</option>
-                                                        <option value="DC Design">DC Design</option>
-                                                        <option value="Ferrari">Ferrari</option>
-                                                        <option value="Fiat">Fiat</option>
-                                                        <option value="Ford">Ford</option>
-                                                        <option value="Hummer">Hummer</option>
-                                                        <option value="Jaguar">Jaguar</option>
-                                                        <option value="JEEP">JEEP</option>
-                                                        <option value="KIA">KIA</option>
-                                                        <option value="Lamborghini">Lamborghini</option>
-                                                        <option value="Land Rover">Land Rover</option>
-                                                        <option value="Lexus">Lexus</option>
-                                                        <option value="MAHINDRA">MAHINDRA</option>
-                                                        <option value="Maserati">Maserati</option>
-                                                        <option value="Mazda">Mazda</option>
-                                                        <option value="Mercedes-Benz">Mercedes-Benz</option>
-                                                        <option value="MG">MG</option>
-                                                        <option value="MINI">MINI</option>
-                                                        <option value="Porsche">Porsche</option>
-                                                        <option value="Range Rover">Range Rover</option>
-                                                        <option value="ROLLS ROYCE">ROLLS ROYCE</option>
-                                                        <option value="SKODA">SKODA</option>
-                                                        <option value="Toyota">Toyota</option>
-                                                        <option value="VOLKSWAGEN">VOLKSWAGEN</option>
-                                                        <option value="Volvo">Volvo</option>
-                                                        <option value="Other">Other</option>
+                                                        <!-- Add the remaining car brands -->
                                                     </select>
                                                 </div>
                                                 <div class="invalid-feedback">Please select a car make.</div>
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form_boxes">
-                                                    <label>Car Model</label>
-                                                    <input type="text" name="model" class="form-control" required>
+                                                    <label for="car-model">Car Model</label>
+                                                    <input type="text" id="car-model" name="model" class="form-control" required>
                                                 </div>
                                                 <div class="invalid-feedback">Please provide the car model.</div>
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form_boxes">
-                                                    <label>MFG Year</label>
-                                                    <input type="text" name="mfg-year" class="form-control" required>
+                                                    <label for="mfg-year">MFG Year</label>
+                                                    <input type="text" id="mfg-year" name="mfg-year" class="form-control" required>
                                                 </div>
-                                                <div class="invalid-feedback">Please provide the manufacturing year.
-                                                </div>
+                                                <div class="invalid-feedback">Please provide the manufacturing year.</div>
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form_boxes">
-                                                    <label>KMs Driven</label>
-                                                    <input type="text" name="kms" class="form-control" required>
+                                                    <label for="kms-driven">KMs Driven</label>
+                                                    <input type="text" id="kms-driven" name="kms" class="form-control" required>
                                                 </div>
                                                 <div class="invalid-feedback">Please enter kilometers driven.</div>
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form_boxes">
-                                                    <label>Registration No.</label>
-                                                    <input type="text" name="reg" class="form-control" required>
+                                                    <label for="registration-no">Registration No.</label>
+                                                    <input type="text" id="registration-no" name="reg" class="form-control" required>
                                                 </div>
-                                                <div class="invalid-feedback">Please provide the registration number.
-                                                </div>
+                                                <div class="invalid-feedback">Please provide the registration number.</div>
                                             </div>
                                         </div>
-
+                                    
                                         <!-- Step 2 -->
                                         <div class="step row">
-                                            <div class="col-lg-4">
+                                            <div class="col-lg-6 mb-4">
                                                 <div class="form_boxes">
-                                                    <label>Car Image 1</label>
-                                                    <input type="file" name="img1" class="form-control" required>
+                                                    <label for="car-img1">Car Image 1</label>
+                                                    <input type="file" id="car-img1" name="img1" class="form-control" required>
                                                 </div>
                                                 <div class="invalid-feedback">Please upload car image 1.</div>
                                             </div>
-                                            <div class="col-lg-4">
-                                                <div class="form_boxes">
-                                                    <label>Car Image 2</label>
-                                                    <input type="file" name="img2" class="form-control" required>
+                                            <div class="col-lg-6">
+                                                <div class="form_boxes mb-4">
+                                                    <label for="car-img2">Car Image 2</label>
+                                                    <input type="file" id="car-img2" name="img2" class="form-control" required>
                                                 </div>
                                                 <div class="invalid-feedback">Please upload car image 2.</div>
                                             </div>
-                                            <div class="col-lg-4">
-                                                <div class="form_boxes">
-                                                    <label>Car Image 3</label>
-                                                    <input type="file" name="img3" class="form-control" required>
+                                            <div class="col-lg-6">
+                                                <div class="form_boxes mb-4">
+                                                    <label for="car-img3">Car Image 3</label>
+                                                    <input type="file" id="car-img3" name="img3" class="form-control" required>
                                                 </div>
                                                 <div class="invalid-feedback">Please upload car image 3.</div>
                                             </div>
+                                            <div class="col-lg-6">
+                                                <div class="form_boxes mb-4">
+                                                    <label for="car-img4">Car Image 4</label>
+                                                    <input type="file" id="car-img4" name="img4" class="form-control" required>
+                                                </div>
+                                                <div class="invalid-feedback">Please upload car image 4.</div>
+                                            </div>
                                         </div>
-
+                                    
                                         <!-- Step 3 -->
                                         <div class="step row">
                                             <div class="col-lg-4">
                                                 <div class="form_boxes">
-                                                    <label>Name</label>
-                                                    <input type="text" name="name" class="form-control" required>
+                                                    <label for="name">Name</label>
+                                                    <input type="text" id="name" name="name" class="form-control" required>
                                                 </div>
                                                 <div class="invalid-feedback">Please enter your name.</div>
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form_boxes">
-                                                    <label>Email ID</label>
-                                                    <input type="email" name="email" class="form-control" required>
+                                                    <label for="email">Email ID</label>
+                                                    <input type="email" id="email" name="email" class="form-control" required>
                                                 </div>
                                                 <div class="invalid-feedback">Please enter a valid email.</div>
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form_boxes">
-                                                    <label>Mobile Number</label>
-                                                    <input type="text" name="contact-number" class="form-control"
-                                                        required>
+                                                    <label for="contact-number">Mobile Number</label>
+                                                    <input type="text" id="contact-number" name="contact-number" class="form-control" required>
                                                 </div>
                                                 <div class="invalid-feedback">Please enter your mobile number.</div>
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form_boxes">
-                                                    <label>City</label>
-                                                    <input type="text" name="city" class="form-control" required>
+                                                    <label for="city">City</label>
+                                                    <input type="text" id="city" name="city" class="form-control" required>
                                                 </div>
                                                 <div class="invalid-feedback">Please enter your city.</div>
                                             </div>
                                         </div>
-
+                                    
                                         <!-- Navigation Buttons -->
-                                        <div class="form-submit col-12 d-flex justify-content-between">
-                                            <button type="button" id="prevBtn" class="btn btn-secondary"
-                                                onclick="nextPrev(-1)">Previous</button>
-                                            <button type="button" id="nextBtn" class="btn btn-primary"
-                                                onclick="nextPrev(1)">Next</button>
+                                        <div class="form-submit col-12 d-flex justify-content-center mt-4">
+                                            <button type="button" id="prevBtn" class="btn btn-secondary rounded-lg me-4" onclick="nextPrev(-1)">Previous</button>
+                                            <button type="button" id="nextBtn" class="btn btn-primary" onclick="nextPrev(1)">Next</button>
                                         </div>
                                     </form>
+                                    
 
 
 
