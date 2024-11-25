@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Asian Motors</title>
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link href="css/mmenu.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+</head>
+
+<body>
+
+    <div class="boxcar-wrapper">
+
+        <!-- Main Header-->
+        <header class="boxcar-header header-style-v1 style-two inner-header cus-style-1">
+
+            <div id="nav-mobile"></div>
+        </header>
+        <!-- End header-section -->
+
+        <!-- contact-us-section -->
+        <section class="contact-us-section layout-radius">
+            <div class="boxcar-container">
+                <!-- boxcar-title -->
+                <div class="boxcar-title-three wow fadeInUp">
+                    <ul class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li><span>Our Showroom</span></li>
+                    </ul>
+                    <h2>Our Showroom    </h2>
+                </div>
+                <!-- End section title -->
+
+                <div class="gallery row">
+                    <div class="gallery-item col-12 col-md-6 col-lg-4 mb-20">
+                        <img loading="lazy"  src="https://lh3.googleusercontent.com/p/AF1QipM6MRjyloENJAOln3GZ80ghINVBeUougbLNDJLg=s1360-w1360-h1020" alt="Image 1" />
+                    </div>
+                    <div class="gallery-item col-12 col-md-6 col-lg-4 mb-20">
+                        <img loading="lazy"  src="https://lh3.googleusercontent.com/p/AF1QipM8ONQjHFs1J1PAhvV41dfA4MSNmZZQNijzGyKt=s1360-w1360-h1020" alt="Image 2" />
+                    </div>
+                    <div class="gallery-item col-12 col-md-6 col-lg-4 mb-20">
+                        <img loading="lazy"  src="https://lh3.googleusercontent.com/p/AF1QipOGhqSjDKhKyCe28OZK1gPkdZsMHsEY8VM32uTQ=s1360-w1360-h1020" alt="Image 3" />
+                    </div>
+                    <div class="gallery-item col-12 col-md-6 col-lg-4 mb-20">
+                        <img loading="lazy"  src="https://lh3.googleusercontent.com/p/AF1QipMclsaHw4I5A4LQqnAUDKTGoQ9gRvw7ackM7tqp=s1360-w1360-h1020" alt="Image 4" />
+                    </div>
+                    <div class="gallery-item col-12 col-md-6 col-lg-4 mb-20">
+                        <img loading="lazy"  src="https://lh3.googleusercontent.com/p/AF1QipMclsaHw4I5A4LQqnAUDKTGoQ9gRvw7ackM7tqp=s1360-w1360-h1020" alt="Image 4" />
+                    </div>
+                    <div class="gallery-item col-12 col-md-6 col-lg-4 mb-20">
+                        <img loading="lazy"  src="https://lh3.googleusercontent.com/p/AF1QipPnVPlqwdhoqfpzi3oJdEK6s5Lpmi_1sU5yvTEd=s1360-w1360-h1020" alt="Image 4" />
+                    </div>
+                    <div class="gallery-item col-12 col-md-6 col-lg-4 mb-20">
+                        <img loading="lazy"  src="https://lh3.googleusercontent.com/p/AF1QipMKm-hff2ox3qD6PYspE9Jm0l6g70_U_zBgzw5F=s1360-w1360-h1020" alt="Image 4" />
+                    </div>
+                   
+                    <!-- Add more gallery-item divs as needed -->
+                </div>
+
+                 <!-- Modal for Image Preview -->
+                 <div class="image-modal" id="imageModal">
+                    <span class="close-modal" onclick="closeModal()">&times;</span>
+                    <img loading="lazy"  class="modal-content" id="modalImage" />
+                    <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+                    <button class="next" onclick="changeImage(1)">&#10095;</button>
+                </div>
+
+            </div>
+        </section>
+        <!-- contact-us-section -->
+
+
+
+
+        <!-- main footer -->
+        <footer class="boxcar-footer footer-style-one v1 cus-st-1">
+          
+        </footer>
+        <!-- End boxcar-footer -->
+
+    </div><!-- End Page Wrapper -->
+
+    <!-- Scroll To Top -->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/slick-animation.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/mixitup.js"></script>
+    <script src="js/knob.js"></script>
+    <script src="js/mmenu.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script>
+        // JavaScript for Image Modal
+ const galleryImages = document.querySelectorAll(".gallery-item img");
+ const modal = document.getElementById("imageModal");
+ const modalImage = document.getElementById("modalImage");
+ 
+ let currentIndex = 0;
+ 
+ // Open Modal on Image Click
+ galleryImages.forEach((img, index) => {
+     img.addEventListener("click", () => {
+         currentIndex = index;
+         openModal(img.src);
+     });
+ });
+ 
+ function openModal(src) {
+     modal.style.display = "flex";
+     modalImage.src = src;
+ }
+ 
+ // Close Modal
+ function closeModal() {
+     modal.style.display = "none";
+ }
+ 
+ // Change Image
+ function changeImage(direction) {
+     currentIndex += direction;
+ 
+     // Loop through images
+     if (currentIndex < 0) currentIndex = galleryImages.length - 1;
+     if (currentIndex >= galleryImages.length) currentIndex = 0;
+ 
+     modalImage.src = galleryImages[currentIndex].src;
+ }
+ 
+ // Close Modal on Click Outside Image
+ modal.addEventListener("click", (event) => {
+     if (event.target === modal) closeModal();
+ });
+ 
+         </script>
+</body>
+
+
+</html>

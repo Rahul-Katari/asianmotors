@@ -64,7 +64,7 @@ const navbarHtml = `<div class="header-inner">
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="cars.html">Current Stock</a></li>
                         <li><a href="sellyourcar.html">Sell Your Car</a></li>
-                        <li><a href="#">Our Showroom</a></li>
+                        <li><a href="ourshowroom.html">Our Showroom</a></li>
                         <li><a href="finance.html">EMI Calculator</a></li>
                         <li><a href="insurance.html">Insurance</a></li>
                         <li><a href="#">Blog</a></li>
