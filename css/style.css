@@ -6990,9 +6990,9 @@ Section Title
     padding-top: 180px;
   }
 
-  .background-video {
-    height: 300px;
-    margin-top: 105px;
+  .background-video-mobile {
+    /* height: 300px; */
+    /* margin-top: 105px; */
   }
 
   .boxcar-banner-section-nine::before {
@@ -7414,7 +7414,7 @@ Section Title
     margin-bottom: 0;
   }
   .boxcar-banner-section-nine::before{
-    height: 98%;
+    height: 99%;
   }
 }
 
@@ -29578,7 +29578,7 @@ li.nav-sub.mm-listitem .mm-listitem__btn {
 
 @media (max-width: 991px) {
   .home-page .mobile-navigation rect {
-    fill: #000 !important;
+    fill: #fff !important;
   }
 
   .sticky-nav .mobile-navigation rect {
@@ -29609,6 +29609,9 @@ li.nav-sub.mm-listitem .mm-listitem__btn {
 
   .header-style-v1 {
     background-color: #fff;
+  }
+  .home-page .header-style-v1 {
+    background-color: transparent;
   }
 }
 

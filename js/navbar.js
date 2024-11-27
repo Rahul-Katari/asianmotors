@@ -107,7 +107,7 @@ $('onload', function () {
             navbar.addClass('sticky-nav shadow');
         } if(currentScroll == 0){
             if(window.location.pathname === "/" || window.location.pathname.includes("index")){
-                if(window.innerWidth > 768)
+                // if(window.innerWidth > 768)
                 navbar.css({transform: 'translateY(0)', backgroundColor: 'transparent'});
             }
             else{
